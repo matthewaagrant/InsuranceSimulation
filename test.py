@@ -9,9 +9,12 @@ import losses
 import scipy.stats as sp
 import numpy as np
 
-myLoB = losses.LineOfBusiness(name = "Property", largeLoss = True)
+myLoB = losses.LineOfBusiness(name = "Property", largeLoss = True,
+                              premiumPattern = np.array([[1.5, 0.25],[0.85, 0.75]]))
 
-x = myLoB.run(10000)
+x = myLoB.run(1000)
 x.largeInfo()
+
+
 
 

@@ -11,7 +11,7 @@ import numpy as np
 
 myLoB = losses.LineOfBusiness(name = "Property", largeLoss = True)
 
-x = myLoB.run()
-print myLoB.name
+x = myLoB.run(10000)
+x.largeInfo()
 
 
